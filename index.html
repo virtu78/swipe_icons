@@ -7,9 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 <link href='style.css' rel='stylesheet'/>
 <style>
-
 /* Swipe 2 required styles */
-
 .swipe {
 	overflow: hidden;
 	visibility: hidden;
@@ -24,7 +22,6 @@
 	width:100%;
 	position: relative;
 }
-
 .deg90{
 	-moz-transform: rotate(-90deg);
 }
@@ -38,16 +35,10 @@
 	-moz-transform: rotate(-0deg);
 }
 /* END required styles */
-
 </style>
-
 </head>
 <body>
-
 <h1>Swipe</h1>
-
-
-
 <div id='mySwipe' style='max-width:500px;margin:0 auto' class='swipe'>
   <div class='swipe-wrap'>
     <div id='img'><img id='multiple_smartphones90' src="svg/multiple_smartphones.svg"> </div>
@@ -92,35 +83,44 @@
 	<div id='img'><img id='approval0' src="svg/approval.svg"></div>
   </div>
 </div>
-
-
-
-<div style='text-align:center;padding-top:20px;'>
-  
+<div style='text-align:center;padding-top:20px;'>  
   <button id='but1' >prev</button> 
   <button id='but2' >next</button>
-
 </div>
-
 <script src='swipe.js'></script>
 <script>
-var button = document.getElementById("but2");
+var button2 = document.getElementById("but2");
 var count = 0;
-console.log(count);
-button.addEventListener("click", function() {
-mySwipe.next();
-forward();
+button2.addEventListener("click", function() {
+	mySwipe.next();
+	right();
 });
-function forward(){
-	
-	if (document.onclick = button){
+var button1 = document.getElementById("but1")
+button1.addEventListener("click", function() {
+	mySwipe.prev();
+	left();
+});
+function right(){
+	if (document.onclick = button2){
 		count++;
+		rotate();
 		console.log(count);
+	}	
+}
+function left(){
+	if (document.onclick = button1){
+		count--;
+		rotate();
+		console.log(count);			
+	}	
+}
+function rotate(){
 		if (count===1){
 			document.getElementById('multiple_smartphones90').className = 'deg60';
 			document.getElementById('multiple_smartphones60').className = 'deg60';
 			document.getElementById('multiple_smartphones30').className = 'deg60';
 			document.getElementById('multiple_smartphones0').className = 'deg60';
+			document.getElementById('but1').disabled=false;
 		}
 		else if(count===2){
 			document.getElementById('multiple_smartphones90').className = 'deg30';
@@ -206,18 +206,18 @@ function forward(){
 			document.getElementById('n_transit30').className = 'deg0';
 			document.getElementById('n_transit0').className = 'deg0';
 		}
-                else if(count===16){
+        else if(count===16){
                         document.getElementById('high_priority90').className = 'deg90';
                         document.getElementById('high_priority60').className = 'deg90';
                         document.getElementById('high_priority30').className = 'deg90';
                         document.getElementById('high_priority0').className = 'deg90';
-                }
+        }
 		else if(count===17){
                         document.getElementById('high_priority90').className = 'deg60';
                         document.getElementById('high_priority60').className = 'deg60';
                         document.getElementById('high_priority30').className = 'deg60';
                         document.getElementById('high_priority0').className = 'deg60';
-                }
+        }
 		else if(count===18){
                         document.getElementById('high_priority90').className = 'deg30';
                         document.getElementById('high_priority60').className = 'deg30';
@@ -279,7 +279,7 @@ function forward(){
                         document.getElementById('engineering0').className = 'deg0';
                 }
 		else if(count===28){
-                        document.getElementById('databaseg90').className = 'deg90';
+                        document.getElementById('database90').className = 'deg90';
                         document.getElementById('database60').className = 'deg90';
                         document.getElementById('database30').className = 'deg90';
                         document.getElementById('database0').className = 'deg90';
@@ -291,13 +291,13 @@ function forward(){
                         document.getElementById('database0').className = 'deg60';
                 }
 		else if(count===30){
-                        document.getElementById('databaseg90').className = 'deg30';
+                        document.getElementById('database90').className = 'deg30';
                         document.getElementById('database60').className = 'deg30';
                         document.getElementById('database30').className = 'deg30';
                         document.getElementById('database0').className = 'deg30';
                 }
 		else if(count===31){
-                        document.getElementById('databaseg90').className = 'deg0';
+                        document.getElementById('database90').className = 'deg0';
                         document.getElementById('database60').className = 'deg0';
                         document.getElementById('database30').className = 'deg0';
                         document.getElementById('database0').className = 'deg0';
@@ -343,45 +343,21 @@ function forward(){
                         document.getElementById('approval60').className = 'deg30';
                         document.getElementById('approval30').className = 'deg30';
                         document.getElementById('approval0').className = 'deg30';
+						document.getElementById('but1').disabled=false;
                 }
 		 else if(count===39){
                         document.getElementById('approval90').className = 'deg0';
                         document.getElementById('approval60').className = 'deg0';
                         document.getElementById('approval30').className = 'deg0';
                         document.getElementById('approval0').className = 'deg0';
+						console.log("Repeat...")
                 }
-
 		else{
-			console.log("ну че, по второму кругу?")
+			count=0;
+			document.getElementById('multiple_smartphones90').className = 'deg90';
+			document.getElementById('but1').disabled=true;
 		}	
 	}
-}
-
-
-
-
-
- 
-
-
-/*var button = document.getElementById("but1");
-button.addEventListener("click", function() {
-	mySwipe.prev();
-	
-	if(document.getElementById('multiple_smartphones30').className = 'forward_deg0'){
-	document.getElementById('multiple_smartphones30').className = 'back_deg30'
-	}
-    if(document.getElementById('multiple_smartphones60').className = 'forward_deg30'){
-	document.getElementById('multiple_smartphones60').className = 'back_deg60'
-	}
-	if(document.getElementById('multiple_smartphones90').className = 'forward_deg60'){
-	document.getElementById('multiple_smartphones90').className = 'deg90'
-	}
-	if(document.getElementById('approval0').className = 'deg0'){
-	document.getElementById('approval0').className = 'deg0'
-	}
-});
-*/
 </script>
 <script>
 // pure JS
@@ -392,19 +368,12 @@ window.mySwipe = Swipe(elem, {
   // continuous: true,
   // disableScroll: true,
    //stopPropagation: true,
-  //callback: function() {
- 
-
+  //callback: function(index, element) {
   //},
   // transitionEnd: function(index, element) {}
 });
-
 // with jQuery
 // window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
-
-window.onload = function() {
-   
- };
 </script>
 <script>
 window.onload=function(){
