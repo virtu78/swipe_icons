@@ -91,30 +91,43 @@
 <script>
 var button2 = document.getElementById("but2");
 var count = 0;
-button2.addEventListener("click", function() {
+button2.addEventListener("click", function(){
 	mySwipe.next();
-	right();
+	right(rotate);
+	console.log(count);
 });
 var button1 = document.getElementById("but1")
-button1.addEventListener("click", function() {
+button1.addEventListener("click", function(){
 	mySwipe.prev();
-	left();
+	left(rotate);
+	
 });
-function right(){
+var right = function (callback){
 	if (document.onclick = button2){
-		count++;
-		rotate();
-		console.log(count);
+		count+=1;
+		if (typeof callback !== "function"){
+		callback = false;
+		}
+		if (callback){
+		callback(count);
+		console.log(count);		
+		}	
+		
 	}	
 }
-function left(){
+var left = function (callback){
 	if (document.onclick = button1){
-		count--;
-		rotate();
-		console.log(count);			
-	}	
+		count-=1;
+		if (typeof callback !== "function"){
+		callback = false;
+		}
+		if (callback){
+		callback(count);
+		console.log(count);
+		}	
+	}
 }
-function rotate(){
+var rotate = function (){
 		if (count===1){
 			document.getElementById('multiple_smartphones90').className = 'deg60';
 			document.getElementById('multiple_smartphones60').className = 'deg60';
@@ -223,19 +236,19 @@ function rotate(){
                         document.getElementById('high_priority60').className = 'deg30';
                         document.getElementById('high_priority30').className = 'deg30';
                         document.getElementById('high_priority0').className = 'deg30';
-                }
+        }
 		else if(count===19){
                         document.getElementById('high_priority90').className = 'deg0';
                         document.getElementById('high_priority60').className = 'deg0';
                         document.getElementById('high_priority30').className = 'deg0';
                         document.getElementById('high_priority0').className = 'deg0';
-                }
+        }
 		else if(count===20){
                         document.getElementById('file90').className = 'deg90';
                         document.getElementById('file60').className = 'deg90';
                         document.getElementById('file30').className = 'deg90';
                         document.getElementById('file0').className = 'deg90';
-                }
+        }
 		 else if(count===21){
                         document.getElementById('file90').className = 'deg60';
 	                document.getElementById('file60').className = 'deg60';
@@ -259,105 +272,106 @@ function rotate(){
                         document.getElementById('engineering60').className = 'deg90';
                         document.getElementById('engineering30').className = 'deg90';
                         document.getElementById('engineering0').className = 'deg90';
-               	}
+        }
 		else if(count===25){
                         document.getElementById('engineering90').className = 'deg60';
                         document.getElementById('engineering60').className = 'deg60';
                         document.getElementById('engineering30').className = 'deg60';
                         document.getElementById('engineering0').className = 'deg60';
-                }
+        }
 		else if(count===26){
                         document.getElementById('engineering90').className = 'deg30';
                         document.getElementById('engineering60').className = 'deg30';
                         document.getElementById('engineering30').className = 'deg30';
                         document.getElementById('engineering0').className = 'deg30';
-                }
+        }
 		else if(count===27){
                         document.getElementById('engineering90').className = 'deg0';
                         document.getElementById('engineering60').className = 'deg0';
                         document.getElementById('engineering30').className = 'deg0';
                         document.getElementById('engineering0').className = 'deg0';
-                }
+        }
 		else if(count===28){
                         document.getElementById('database90').className = 'deg90';
                         document.getElementById('database60').className = 'deg90';
                         document.getElementById('database30').className = 'deg90';
                         document.getElementById('database0').className = 'deg90';
-                }
+        }
 		else if(count===29){
                         document.getElementById('database90').className = 'deg60';
                         document.getElementById('database60').className = 'deg60';
                         document.getElementById('database30').className = 'deg60';
                         document.getElementById('database0').className = 'deg60';
-                }
+        }
 		else if(count===30){
                         document.getElementById('database90').className = 'deg30';
                         document.getElementById('database60').className = 'deg30';
                         document.getElementById('database30').className = 'deg30';
                         document.getElementById('database0').className = 'deg30';
-                }
+        }
 		else if(count===31){
                         document.getElementById('database90').className = 'deg0';
                         document.getElementById('database60').className = 'deg0';
                         document.getElementById('database30').className = 'deg0';
                         document.getElementById('database0').className = 'deg0';
-                }
+        }
 		else if(count===32){
                         document.getElementById('businessman90').className = 'deg90';
                         document.getElementById('businessman60').className = 'deg90';
                         document.getElementById('businessman30').className = 'deg90';
                         document.getElementById('businessman0').className = 'deg90';
-                }
+        }
 		 else if(count===33){
                         document.getElementById('businessman90').className = 'deg60';
                         document.getElementById('businessman60').className = 'deg60';
                         document.getElementById('businessman30').className = 'deg60';
                         document.getElementById('businessman0').className = 'deg60';
-                }
+        }
 		 else if(count===34){
                         document.getElementById('businessman90').className = 'deg30';
                         document.getElementById('businessman60').className = 'deg30';
                         document.getElementById('businessman30').className = 'deg30';
                         document.getElementById('businessman0').className = 'deg30';
-                }
+        }
 		 else if(count===35){
                         document.getElementById('businessman90').className = 'deg0';
                         document.getElementById('businessman60').className = 'deg0';
                         document.getElementById('businessman30').className = 'deg0';
                         document.getElementById('businessman0').className = 'deg0';
-                }
+        }
 		 else if(count===36){
                         document.getElementById('approval90').className = 'deg90';
                         document.getElementById('approval60').className = 'deg90';
                         document.getElementById('approval30').className = 'deg90';
                         document.getElementById('approval0').className = 'deg90';
-                }
+        }
 		 else if(count===37){
                         document.getElementById('approval90').className = 'deg60';
                         document.getElementById('approval60').className = 'deg60';
                         document.getElementById('approval30').className = 'deg60';
                         document.getElementById('approval0').className = 'deg60';
-                }
+        }
 		 else if(count===38){
                         document.getElementById('approval90').className = 'deg30';
                         document.getElementById('approval60').className = 'deg30';
                         document.getElementById('approval30').className = 'deg30';
                         document.getElementById('approval0').className = 'deg30';
 						document.getElementById('but1').disabled=false;
-                }
+        }
 		 else if(count===39){
                         document.getElementById('approval90').className = 'deg0';
                         document.getElementById('approval60').className = 'deg0';
                         document.getElementById('approval30').className = 'deg0';
                         document.getElementById('approval0').className = 'deg0';
 						console.log("Repeat...")
-                }
+        }
 		else{
 			count=0;
 			document.getElementById('multiple_smartphones90').className = 'deg90';
 			document.getElementById('but1').disabled=true;
 		}	
-	}
+		console.log(count);
+}
 </script>
 <script>
 // pure JS
