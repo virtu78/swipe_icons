@@ -14,8 +14,10 @@
 
 ![Альтернативный текст](https://github.com/virtu78/swipe_icons/blob/master/png/02.png)
 
-##Происходит замена иконки
+## Происходит замена иконки
 
 ![Альтернативный текст](https://github.com/virtu78/swipe_icons/blob/master/png/03.png)
 
+ ##Конечное состояние
+ 
 ![Альтернативный текст](https://github.com/virtu78/swipe_icons/blob/master/png/04.PNG)
