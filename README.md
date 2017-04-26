@@ -16,6 +16,6 @@
 
 ##Происходит замена иконки
 
-![Альтернативный текст](https://github.com/virtu78/swipe_icons/blob/master/png/03.PNG)
+![Альтернативный текст](https://github.com/virtu78/swipe_icons/blob/master/png/03.png)
 
 ![Альтернативный текст](https://github.com/virtu78/swipe_icons/blob/master/png/04.PNG)
